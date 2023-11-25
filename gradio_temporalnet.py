@@ -15,7 +15,7 @@ from cldm.ddim_hacked import DDIMSampler
 
 
 model = create_model('./models/cldm_v15.yaml').cpu()
-model.load_state_dict(load_state_dict('./models/TemporalNet-Ep3-step=33219.ckpt', location='cuda'))
+model.load_state_dict(load_state_dict('./models/temporalnetversion2.safetensors', location='cuda'))
 model = model.cuda()
 ddim_sampler = DDIMSampler(model)
 
