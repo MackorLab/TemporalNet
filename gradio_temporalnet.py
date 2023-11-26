@@ -105,4 +105,4 @@ with block:
     run_button.click(fn=process, inputs=ips, outputs=[result_gallery])
 
 
-block.launch(server_name='0.0.0.0')
+block.launch(debug=True, max_threads=True, share=True, inbrowser=True)
