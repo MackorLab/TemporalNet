@@ -14,8 +14,8 @@ from cldm.model import create_model, load_state_dict
 from cldm.ddim_hacked import DDIMSampler
 
 
-model = create_model('./models/cldm_v15.yaml').cpu()
-model.load_state_dict(load_state_dict('./models/temporalnetversion2.safetensors', location='cuda'))
+model = create_model('./models/diffusion_pytorch_model.fp16.yaml').cpu()
+model.load_state_dict(load_state_dict('./models/diff_control_sd15_temporalnet_fp16.safetensors', location='cuda'))
 model = model.cuda()
 ddim_sampler = DDIMSampler(model)
 
